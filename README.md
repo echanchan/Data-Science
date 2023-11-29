@@ -24,3 +24,7 @@ Se utilizaron técnicas de web scraping o APIs para obtener noticias de un peri�
 8. **Conversión a Diccionario:** Transformación de las listas en un diccionario.
 9. **Transformación a DataFrame:** Conversión del diccionario en un DataFrame de pandas para análisis posterior.
 10. **Exportación del DataFrame:** Guardado como archivo CSV agregando un timestamp para individualizar cada extracción de datos.
+
+### Cambios
+
+Se agrego el archivo de Scraper para el Diario El Mundo, por el momento este no recolecta las palabras clave.
