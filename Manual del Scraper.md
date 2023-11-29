@@ -1,6 +1,6 @@
 # Scraper_El_Salvador.py
 
-Este código es un script en Python que realiza web scraping para recopilar noticias del sitio web "[https://www.elsalvador.com/](https://www.elsalvador.com/)". A continuación, te proporciono una explicación detallada del código:
+Este código es un script en Python que realiza web scraping para recopilar noticias del sitio web "[www.elsalvador.com](https://www.elsalvador.com/)". A continuación, te proporciono una explicación detallada del código:
 
 ### Importación de bibliotecas
 ```py
