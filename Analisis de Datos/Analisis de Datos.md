@@ -121,9 +121,7 @@ plt.plot(data_agrupada.index, data_agrupada, marker='o', linestyle='-')
   ### Configuración de las etiquetas de las fechas
 ````python
 plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-
 plt.gca().xaxis.set_major_locator(mdates.AutoDateLocator())
-
 plt.xticks(rotation=45, ha='right')  # Rotar las fechas para mejor visualización
 ````
 ### Configuración adicional del gráfico
@@ -142,34 +140,28 @@ plt.show()
 ### Extraer el día de la semana (0 es lunes, 6 es domingo)
 ````python
 df['Dia_Semana'] = df['Fecha'].dt.dayofweek
-````
-  
+````  
 ### Crear una copia de los datos para evitar SettingWithCopyWarning
 ````python
 data_clean = df.dropna(subset=['Dia_Semana']).copy()
-````
- 
+```` 
 ### Convertir 'Dia_Semana' a tipo entero
 ````python
 data_clean['Dia_Semana'] = data_clean['Dia_Semana'].astype(int)
-````
-  
+````  
 ### Agrupar por día de la semana y contar el número de noticias
 ````python
 conteo_dias_semana = data_clean.groupby('Dia_Semana').size()
-````
-  
+````  
 ### Crear un mapeo de números a nombres de días
 ````python
 dias = ['Lunes',  'Martes',  'Miércoles',  'Jueves',  'Viernes',  'Sábado',  'Domingo']
 conteo_dias_semana.index = [dias[dia]  for dia in conteo_dias_semana.index]
-````
-  
+````  
 ### Crear el gráfico de barras
 ````python
 sns.barplot(x=conteo_dias_semana.index, y=conteo_dias_semana.values)
-````
-  
+````  
 ### Etiquetas y título
 ````python
 plt.xlabel('Día de la Semana')
