@@ -26,5 +26,7 @@ Se utilizaron técnicas de web scraping o APIs para obtener noticias de un peri�
 10. **Exportación del DataFrame:** Guardado como archivo CSV agregando un timestamp para individualizar cada extracción de datos.
 
 ## Cambios
-
+### 1
 Se agrego el archivo de Scraper para el Diario El Mundo, por el momento este no recolecta las palabras clave.
+### 2 
+Se agrego el Analisis de datos para un CSV de [El Diario de Hoy](https://www.elsalvador.com).
